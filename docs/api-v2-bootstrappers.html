@@ -39,11 +39,18 @@
     <span class="hljs-string">"wallet:recharge"</span>: {
         <span class="hljs-string">"open"</span>: <span class="hljs-literal">true</span>
     },
+    <span class="hljs-string">"wallet:transform"</span>: {
+        <span class="hljs-string">"open"</span>: <span class="hljs-literal">true</span>
+    },
     <span class="hljs-string">"currency:cash"</span>: {
         <span class="hljs-string">"open"</span>: <span class="hljs-literal">true</span>
     },
     <span class="hljs-string">"currency:recharge"</span>: {
         <span class="hljs-string">"open"</span>: <span class="hljs-literal">true</span>
+    },
+    <span class="hljs-string">"currency:recharge"</span>: {
+        <span class="hljs-string">"open"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"IAP_only"</span>: <span class="hljs-literal">true</span>,
     },
     <span class="hljs-string">"ad"</span>:[
         {
@@ -112,8 +119,10 @@
 <tr><td style="text-align:center">wallet:ratio</td><td style="text-align:center">显示金额与服务端金额的转换比例</td><td style="text-align:center"></td><td style="text-align:center">显示金额 = 服务端金额 / wallet:ratio</td></tr>
 <tr><td style="text-align:center">wallet:cash</td><td style="text-align:center">钱包提现的开关选项</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
 <tr><td style="text-align:center">wallet:recharge</td><td style="text-align:center">钱包充值的开关选项</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">wallet:transform</td><td style="text-align:center">钱包余额转换积分的开关选项</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
 <tr><td style="text-align:center">currency:cash</td><td style="text-align:center">积分提现的开关选项</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-<tr><td style="text-align:center">currency:recharge</td><td style="text-align:center">积分充值的开关选项</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">currency:recharge.open</td><td style="text-align:center">积分充值的开关选项</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+<tr><td style="text-align:center">currency:recharge.IAP_only</td><td style="text-align:center">IOS端只允许IAP充值的开关选项</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
 <tr><td style="text-align:center">ad</td><td style="text-align:center">广告位相关</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
 <tr><td style="text-align:center">site</td><td style="text-align:center">系统配置相关</td><td style="text-align:center"></td><td style="text-align:center">类型：json对象</td></tr>
 <tr><td style="text-align:center">site.gold:status</td><td style="text-align:center">是否开启积分系统</td><td style="text-align:center">true：开启，false：关闭</td><td style="text-align:center">控制前端展示相应的积分模块，类型：Boolean</td></tr>
