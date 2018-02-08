@@ -9,6 +9,7 @@
 <li><a href="#全部圈子列表">全部圈子列表</a></li>
 <li><a href="#推荐圈子列表">推荐圈子列表</a></li>
 <li><a href="#我的圈子列表">我的圈子列表</a></li>
+<li><a href="#用户圈子列表">用户圈子列表</a></li>
 <li><a href="#圈子详情">圈子详情</a></li>
 <li><a href="#圈子总数">圈子总数</a></li>
 <li><a href="#加入圈子">加入圈子</a></li>
@@ -154,6 +155,19 @@
 <tr><td style="text-align:center">limit</td><td style="text-align:left">integer</td><td style="text-align:left">默认 20 ，数据返回条数 默认为20</td></tr>
 <tr><td style="text-align:center">offset</td><td style="text-align:left">integer</td><td style="text-align:left">默认 0 ，数据偏移量，传递之前通过接口获取的总数。</td></tr>
 <tr><td style="text-align:center">type</td><td style="text-align:left">string</td><td style="text-align:left">默认: join, join 我加入 audit 待审核 allow_post 可以发帖的</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" name=""></a><a href="#" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>用户圈子列表</h2>
+<pre><code class="hljs"><span class="hljs-builtin-name">GET</span> /api/v2/plus-group/groups<span class="hljs-built_in">/users
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" name=""></a><a href="#" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>输入</h2>
+<table>
+<thead>
+<tr><th style="text-align:center">名称</th><th style="text-align:left">描述</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">user_id</td><td style="text-align:left">用户id</td></tr>
+<tr><td style="text-align:center">type</td><td style="text-align:left">查询类型，目前只有<code>join</code>，用户加入的圈子</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" name=""></a><a href="#" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>圈子详情</h2>
