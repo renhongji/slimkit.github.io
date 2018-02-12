@@ -29,7 +29,8 @@
 <pre><code class="hljs css json">{
     <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGx1cy5pby9hcGkvdjIvYXV0aC9sb2dpbiIsImlhdCI6MTUxNTU3NDE0MSwiZXhwIjoxNTE1NTc3NzQxLCJuYmYiOjE1MTU1NzQxNDEsImp0aSI6Imx1MWtFcDd1UjZpWnoxV3giLCJzdWIiOjEsInBydiI6IjQ4ZTQ1MzgzMWNlYmE1ZTU3YTQ3NWU2ODY0OWNmZGVlNmU5N2Q4ZDIifQ.0_u1dgb-rSr2o7nIx4Q1n1NNcr1LMAtgTbKsFFdUvmg"</span>,
     <span class="hljs-attr">"token_type"</span>: <span class="hljs-string">"bearer"</span>,
-    <span class="hljs-attr">"expires_in"</span>: <span class="hljs-number">3600</span>
+    <span class="hljs-attr">"expires_in"</span>: <span class="hljs-number">60</span>,
+    <span class="hljs-attr">"refresh_ttl"</span>: <span class="hljs-number">20160</span>
 }
 </code></pre>
 <table>
@@ -39,7 +40,8 @@
 <tbody>
 <tr><td style="text-align:center">access_token</td><td>授权 Token</td></tr>
 <tr><td style="text-align:center">token_type</td><td>Token 类型</td></tr>
-<tr><td style="text-align:center">expires_in</td><td>过期时间，单位秒</td></tr>
+<tr><td style="text-align:center">expires_in</td><td>过期时间，单位分</td></tr>
+<tr><td style="text-align:center">refresh_ttl</td><td>刷新过期时间，单位分</td></tr>
 </tbody>
 </table>
 <p><a name="logout"></a></p>
