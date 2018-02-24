@@ -7,7 +7,7 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/slimkit/slimkit.github.io/edit/source/docs/server-getting-started-installation.md" target="_blank">Edit</a><h1>安装</h1></header><article><div><span><ul>
 <li><a href="#manual-need">环境要求</a></li>
 <li><a href="#install">安装</a>
-<a name="manual-need"></a></li>
+<a id="manual-need"></a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" name=""></a><a href="#" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>环境要求</h2>
 <ul>
@@ -17,7 +17,7 @@
 </ul>
 <h3><a class="anchor" aria-hidden="true" name="php"></a><a href="#php" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PHP &amp; 拓展</h3>
 <ul>
-<li>PHP 必须大于或等于 7.0</li>
+<li>PHP 必须大于或等于 7.1.3</li>
 <li>必须安装扩展 dom</li>
 <li>必须安装扩展 fileinfo</li>
 <li>必须安装扩展 gd</li>
@@ -30,7 +30,7 @@
 <li>使用 SQLite 数据库则必须安装 PHP 拓展 pdo_sqlite</li>
 <li>使用 SQL Server 数据库则必须安装 PHP 拓展 pdo_dblib</li>
 </ul>
-<p><a name="manual-need-php-functions"></a></p>
+<p><a id="manual-need-php-functions"></a></p>
 <h3><a class="anchor" aria-hidden="true" name="php"></a><a href="#php" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PHP 函数</h3>
 <ul>
 <li><code>exec</code></li>
@@ -44,7 +44,7 @@
 <blockquote>
 <p>这些是在 Console 环境下使用的，尽量确保你的系统没有禁止。</p>
 </blockquote>
-<p><a name="manual-need-database"></a></p>
+<p><a id="manual-need-database"></a></p>
 <h3><a class="anchor" aria-hidden="true" name=""></a><a href="#" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>数据库</h3>
 <ul>
 <li><a href="#manual-need-database-mysql">MySQL</a></li>
@@ -56,31 +56,31 @@
 <blockquote>
 <p>推荐使用 PostgreSQL。</p>
 </blockquote>
-<p><a name="manual-need-database-mysql"></a></p>
+<p><a id="manual-need-database-mysql"></a></p>
 <h5><a class="anchor" aria-hidden="true" name="mysql"></a><a href="#mysql" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MySql</h5>
 <p>使用 MySQL 建议使用 <code>&gt;=5.7</code> 版本，必须 <code>&gt;=5.6</code> 版本，如果你的是 5.6 版本，则自行解决索引过长导致的 SQL 执行错误问题。</p>
-<p><a name="manual-need-database-mariadb"></a></p>
+<p><a id="manual-need-database-mariadb"></a></p>
 <h5><a class="anchor" aria-hidden="true" name="mariadb"></a><a href="#mariadb" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MariaDB</h5>
 <p>使用 MariaDB 必须 <code>&gt;=10.3</code> 版本，因为只有该版本是建立在 MySQL 5.6 &amp; 5.7 之上的，得以支持 Emoji。</p>
 <blockquote>
 <p>使用 MariaDB 按照 MySQL 进行配置即可。</p>
 </blockquote>
-<p><a name="manual-need-database-pgsql"></a></p>
+<p><a id="manual-need-database-pgsql"></a></p>
 <h5><a class="anchor" aria-hidden="true" name="postgresql"></a><a href="#postgresql" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PostgreSQL</h5>
 <p>PostgreSQL 数据库天然支持 Emoji，无需任何版本要求，但是我们还是建议使用最新版本的 PostgreSQL 稳定版本的以支持更完善的空间计算。</p>
-<p><a name="manual-need-database-sqlite"></a></p>
+<p><a id="manual-need-database-sqlite"></a></p>
 <h5><a class="anchor" aria-hidden="true" name="sqlite"></a><a href="#sqlite" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SQLite</h5>
 <p>首先，这个数据库不建议使用，因为这种轻量级的数据库适合在 App 中来解决数据本地化需求，服务器应用场景很小。</p>
 <blockquote>
 <p>虽然 ThinkSNS+ 不允许使用 SQLite，但是您仍然可以在系统中使用该数据库，但是例如 Emoji 储存等问题自行解决。</p>
 </blockquote>
-<p><a name="manual-need-database-sql-server"></a></p>
+<p><a id="manual-need-database-sql-server"></a></p>
 <h5><a class="anchor" aria-hidden="true" name="microsoft-sql-server"></a><a href="#microsoft-sql-server" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Microsoft SQL Server</h5>
 <p>就像不推荐 SQLite 一样，我们同样不推荐 Microsoft SQL Server 除非你确定你的系统不适用 Emoji 那么你可以无顾虑的使用 Microsoft SQL Server 了，因为 Microsoft SQL Server 同样支持 utf8 字符集，却无法支持四位长度的 Emoji 字符。</p>
 <blockquote>
 <p>ThinkSNS+ 不建议使用 SQL Server，但是你仍然可以在系统中使用，出现的 emoji 存储问题自行解决。</p>
 </blockquote>
-<p><a name="install"></a></p>
+<p><a id="install"></a></p>
 <h2><a class="anchor" aria-hidden="true" name=""></a><a href="#" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装</h2>
 <p>需要软件：</p>
 <ul>
@@ -186,6 +186,6 @@ php artisan jwt:secret
                 apiKey: '5e14e81576e97337f567595ea504b651',
                 indexName: 'slimkit',
                 inputSelector: '#search_input_react',
-                algoliaOptions: {"hitsPerPage":20}
+                algoliaOptions: {"hitsPerPage":5}
               });
             </script></body></html>
