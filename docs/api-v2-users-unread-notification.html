@@ -13,55 +13,58 @@
 <pre><code class="hljs"><span class="hljs-symbol">Status:</span> <span class="hljs-number">200</span> OK
 </code></pre>
 <pre><code class="hljs css json">{
-    <span class="hljs-attr">"counts"</span>: {
-        <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-attr">"unread_comments_count"</span>: <span class="hljs-number">0</span>,
-        <span class="hljs-attr">"unread_likes_count"</span>: <span class="hljs-number">0</span>,
-        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2017-10-19 15:07:46"</span>,
-        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2017-10-19 15:07:46"</span>
+    "counts": {
+        "user_id": 1,
+        "unread_comments_count": 0,
+        "unread_likes_count": 0,
+        "created_at": "2017-10-19 15:07:46",
+        "updated_at": "2017-10-19 15:07:46"
     },
-    <span class="hljs-attr">"comments"</span>: [
+    "comments": [
         {
-            <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">2</span>,
-            <span class="hljs-attr">"id"</span>: <span class="hljs-number">14</span>,
-            <span class="hljs-attr">"time"</span>: <span class="hljs-string">"2017-09-15 07:37:13"</span>,
-            <span class="hljs-attr">"user"</span>: {
-                <span class="hljs-attr">"id"</span>: <span class="hljs-number">2</span>,
-                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"root1"</span>,
-                <span class="hljs-attr">"bio"</span>: <span class="hljs-literal">null</span>,
-                <span class="hljs-attr">"sex"</span>: <span class="hljs-number">0</span>,
-                <span class="hljs-attr">"location"</span>: <span class="hljs-literal">null</span>,
-                <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2017-07-31 03:16:19"</span>,
-                <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2017-07-31 03:16:19"</span>,
-                <span class="hljs-attr">"avatar"</span>: <span class="hljs-literal">null</span>,
-                <span class="hljs-attr">"bg"</span>: <span class="hljs-literal">null</span>,
-                <span class="hljs-attr">"verified"</span>: <span class="hljs-literal">null</span>,
-                <span class="hljs-attr">"extra"</span>: {
-                    <span class="hljs-attr">"user_id"</span>: <span class="hljs-number">2</span>,
-                    <span class="hljs-attr">"likes_count"</span>: <span class="hljs-number">2</span>,
-                    <span class="hljs-attr">"comments_count"</span>: <span class="hljs-number">9</span>,
-                    <span class="hljs-attr">"followers_count"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-attr">"followings_count"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2017-08-21 08:39:43"</span>,
-                    <span class="hljs-attr">"feeds_count"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-attr">"questions_count"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-attr">"answers_count"</span>: <span class="hljs-number">19</span>,
-                    <span class="hljs-attr">"checkin_count"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-attr">"last_checkin_count"</span>: <span class="hljs-number">0</span>
+            "user_id": 2,
+            "id": 14,
+            "time": "2017-09-15 07:37:13",
+            "user": {
+                "id": 2,
+                "name": "root1",
+                "bio": null,
+                "sex": 0,
+                "location": null,
+                "created_at": "2017-07-31 03:16:19",
+                "updated_at": "2017-07-31 03:16:19",
+                "avatar": null,
+                "bg": null,
+                "verified": null,
+                "extra": {
+                    "user_id": 2,
+                    "likes_count": 2,
+                    "comments_count": 9,
+                    "followers_count": 0,
+                    "followings_count": 0,
+                    "updated_at": "2017-08-21 08:39:43",
+                    "feeds_count": 0,
+                    "questions_count": 1,
+                    "answers_count": 19,
+                    "checkin_count": 0,
+                    "last_checkin_count": 0
                 }
             }
         }
     ],
-    <span class="hljs-attr">"likes"</span>: [],
-    <span class="hljs-attr">"pinneds"</span>: {
-        <span class="hljs-attr">"news"</span>: {
-            <span class="hljs-attr">"time"</span>: <span class="hljs-literal">null</span>,
-            <span class="hljs-attr">"count"</span>: <span class="hljs-number">0</span>
+    "likes": [],
+    "pinneds": {
+        "news": {
+            "time": null,
+            "count": 0
         },
-        <span class="hljs-attr">"feeds"</span>: {
-            <span class="hljs-attr">"time"</span>: <span class="hljs-string">"2017-09-15 10:04:19"</span>,
-            <span class="hljs-attr">"count"</span>: <span class="hljs-number">1</span>
+        "feeds": {
+            "time": "2017-09-15 10:04:19",
+            "count": 1
         }
+    }
+    "system": {
+        ... // 参考系统消息列表接口
     }
 }
 </code></pre>
@@ -71,7 +74,7 @@
 <tr><th style="text-align:center">名称</th><th style="text-align:center">类型</th><th>描述</th></tr>
 </thead>
 <tbody>
-<tr><td style="text-align:center">counts</td><td style="text-align:center">array/null</td><td>用户未读消息统计，未产生任何记录时为null</td></tr>
+<tr><td style="text-align:center">counts</td><td style="text-align:center">Object</td><td>用户未读消息统计，未产生任何记录时为null</td></tr>
 <tr><td style="text-align:center">counts.unread_comments_count</td><td style="text-align:center">int</td><td>未读评论数</td></tr>
 <tr><td style="text-align:center">counts.unread_likes_count</td><td style="text-align:center">int</td><td>未读点赞数</td></tr>
 <tr><td style="text-align:center">comments</td><td style="text-align:center">array</td><td>最近几条评论信息</td></tr>
@@ -81,6 +84,7 @@
 <tr><td style="text-align:center">pinneds</td><td style="text-align:center">array</td><td>未处理审核统计, 目前可能有 <code>news</code> - 未处理的资讯评论置顶, <code>feeds</code> - 未处理的动态评论置顶</td></tr>
 <tr><td style="text-align:center">pinneds.*.time</td><td style="text-align:center">time/null</td><td>最新一条待审核记录的时间</td></tr>
 <tr><td style="text-align:center">pinneds.*.count</td><td style="text-align:center">int</td><td>未操作审核数</td></tr>
+<tr><td style="text-align:center">system</td><td style="text-align:center">Object</td><td>最新的系统消息</td></tr>
 </tbody>
 </table>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="api-v2-users-reward.html">← 打赏用户</a><a class="docs-next button" href="api-v2-users-checkin.html">签到 →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="ThinkSNS Plus" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
