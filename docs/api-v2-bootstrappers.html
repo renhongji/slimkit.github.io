@@ -15,14 +15,6 @@
 </code></pre>
 <pre><code class="hljs css json5">{
     <span class="hljs-string">"server:version"</span>: <span class="hljs-string">"1.6.0"</span>,
-    <span class="hljs-string">"im:serve"</span>: <span class="hljs-string">"127.0.0.1:9900"</span> // IM 服务器地址
-    <span class="hljs-string">"im:helper"</span>: [ // IM 聊天助手用户信息
-        {
-            <span class="hljs-string">"uid"</span>: <span class="hljs-number">1</span>, // 用户ID
-            <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://plus.io/users/1"</span> // 主页地址 URL
-        }
-        // ...
-    ],
     <span class="hljs-string">"wallet:ratio"</span>: <span class="hljs-number">200</span>, // 转换显示余额的比例，百分比。（<span class="hljs-number">200</span> 就表示 <span class="hljs-number">200</span>%）
     <span class="hljs-string">"wallet:recharge-type"</span>: [ // 此配置支持全平台的支付方式，不同平台更具自身平台对应值判断是非支持该支付方式。
         <span class="hljs-string">"alipay"</span>, // <span class="hljs-string">"支付宝 APP 支付"</span>,
@@ -103,6 +95,7 @@
         <span class="hljs-string">"type"</span>: <span class="hljs-string">"mobile-only"</span>,
         <span class="hljs-string">"method"</span>: <span class="hljs-string">"invited"</span>
     },
+    <span class="hljs-string">"im:helper-user"</span>: <span class="hljs-number">1</span>
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id=""></a><a href="#" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参数详解</h2>
@@ -112,9 +105,6 @@
 </thead>
 <tbody>
 <tr><td style="text-align:center">server:version</td><td style="text-align:center">服务端版本号</td><td style="text-align:center"></td><td style="text-align:center">string 类型</td></tr>
-<tr><td style="text-align:center">im</td><td style="text-align:center">聊天相关</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-<tr><td style="text-align:center">im:serve</td><td style="text-align:center">聊天服务器地址</td><td style="text-align:center"></td><td style="text-align:center">需要im扩展以及IM服务端配合使用</td></tr>
-<tr><td style="text-align:center">im:helper</td><td style="text-align:center">聊天助手</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
 <tr><td style="text-align:center">wallet</td><td style="text-align:center">钱包相关</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
 <tr><td style="text-align:center">wallet:ratio</td><td style="text-align:center">显示金额与服务端金额的转换比例</td><td style="text-align:center"></td><td style="text-align:center">显示金额 = 服务端金额 / wallet:ratio</td></tr>
 <tr><td style="text-align:center">wallet:cash</td><td style="text-align:center">钱包提现的开关选项</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
@@ -140,6 +130,7 @@
 <tr><td style="text-align:center">registerSettings.content</td><td style="text-align:center">用户服务条款及隐私政策</td><td style="text-align:center"></td><td style="text-align:center">类型：string，格式：markdown</td></tr>
 <tr><td style="text-align:center">registerSettings.type</td><td style="text-align:center">用户注册方式</td><td style="text-align:center">invited: 仅邀请，  all: 全部， thirdPart: 第三方</td><td style="text-align:center">注册方式控制类型：string</td></tr>
 <tr><td style="text-align:center">registerSettings.method</td><td style="text-align:center">用户注册类型</td><td style="text-align:center">mobile-only: 仅手机， mail-only: 仅邮箱，all： 邮箱或手机</td><td style="text-align:center">类型：string</td></tr>
+<tr><td style="text-align:center">im:helper-user</td><td style="text-align:center">聊天小助手用户 ID</td><td style="text-align:center"></td><td style="text-align:center">Int</td></tr>
 </tbody>
 </table>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="api-v2-overview.html">← 概述</a><a class="docs-next button" href="api-v2-jwt-authorization.html">Json Web Token 授权 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#">启动信息的移动端处理方式</a></li><li><a href="#">列出所有启动者配置</a></li><li><a href="#">参数详解</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="ThinkSNS Plus" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
