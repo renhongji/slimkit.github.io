@@ -70,6 +70,12 @@
             <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2017-07-12 08:09:07"</span>,
             <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2017-07-12 08:09:07"</span>
         }
+    ],
+    <span class="hljs-string">"topics"</span>: [ <span class="hljs-comment">// 话题数据</span>
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,            <span class="hljs-comment">// 话题 ID</span>
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"第一个话题"</span> <span class="hljs-comment">// 话题名称</span>
+        }
     ]
 }
 </code></pre>
@@ -139,46 +145,18 @@
                     <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2017-08-05 03:29:55"</span>,
                     <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2017-08-05 03:29:55"</span>,
                     <span class="hljs-string">"pinned"</span>: <span class="hljs-literal">true</span>
-                },
-                {
-                    <span class="hljs-string">"id"</span>: <span class="hljs-number">3</span>,
-                    <span class="hljs-string">"user_id"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"target_user"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"reply_user"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-string">"body"</span>: <span class="hljs-string">"辣鸡啊啊啊啊"</span>,
-                    <span class="hljs-string">"commentable_id"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"commentable_type"</span>: <span class="hljs-string">"feeds"</span>,
-                    <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2017-08-05 03:29:53"</span>,
-                    <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2017-08-05 03:29:53"</span>,
-                    <span class="hljs-string">"pinned"</span>: <span class="hljs-literal">true</span>
-                },
-                {
-                    <span class="hljs-string">"id"</span>: <span class="hljs-number">3</span>,
-                    <span class="hljs-string">"user_id"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"target_user"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"reply_user"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-string">"body"</span>: <span class="hljs-string">"辣鸡啊啊啊啊"</span>,
-                    <span class="hljs-string">"commentable_id"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"commentable_type"</span>: <span class="hljs-string">"feeds"</span>,
-                    <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2017-08-05 03:29:53"</span>,
-                    <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2017-08-05 03:29:53"</span>
-                },
-                {
-                    <span class="hljs-string">"id"</span>: <span class="hljs-number">2</span>,
-                    <span class="hljs-string">"user_id"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"target_user"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"reply_user"</span>: <span class="hljs-number">0</span>,
-                    <span class="hljs-string">"body"</span>: <span class="hljs-string">"辣鸡啊啊啊啊"</span>,
-                    <span class="hljs-string">"commentable_id"</span>: <span class="hljs-number">1</span>,
-                    <span class="hljs-string">"commentable_type"</span>: <span class="hljs-string">"feeds"</span>,
-                    <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2017-08-05 03:29:51"</span>,
-                    <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2017-08-05 03:29:51"</span>
                 }
             ],
             <span class="hljs-string">"has_collect"</span>: <span class="hljs-literal">false</span>,
             <span class="hljs-string">"has_like"</span>: <span class="hljs-literal">false</span>,
             <span class="hljs-string">"images"</span>: [],
-            <span class="hljs-string">"paid_node"</span>: null
+            <span class="hljs-string">"paid_node"</span>: null,
+            <span class="hljs-string">"topics"</span>: [ // 话题数据
+                {
+                    <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,            // 话题 ID
+                    <span class="hljs-string">"name"</span>: <span class="hljs-string">"第一个话题"</span> // 话题名称
+                }
+            ]
         }
     ]
 }
@@ -214,6 +192,7 @@
 <tr><td style="text-align:center">has_like</td><td style="text-align:center">bool</td><td>是否已赞</td></tr>
 <tr><td style="text-align:center">images</td><td style="text-align:center">array</td><td>图片信息 同单条动态数据结构一致</td></tr>
 <tr><td style="text-align:center">paid_node</td><td style="text-align:center">array</td><td>付费节点信息 同单条动态数据结构一致 不存在时为null</td></tr>
+<tr><td style="text-align:center"><code>topics</code></td><td style="text-align:center"><code>Array</code></td><td>参考「动态详情」，内容一致。</td></tr>
 </tbody>
 </table>
 <blockquote>
