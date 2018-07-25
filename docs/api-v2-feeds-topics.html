@@ -66,7 +66,43 @@
 <p>响应：</p>
 <pre><code class="hljs"><span class="hljs-attr">Status:</span> <span class="hljs-number">204</span> <span class="hljs-literal">No</span> <span class="hljs-string">Content</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="api-v2-feeds-currency.html">← 积分部分新增接口</a><a class="docs-next button" href="api-v2-music.html">音乐 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#list-all-topics">List all topics（获取全部话题）</a></li><li><a href="#create-an-topic">Create an topic（创建一个话题）</a></li><li><a href="#follow-a-topic">Follow a topic（关注一个话题）</a></li><li><a href="#unfollow-a-topic">Unfollow a topic（取消关注一个话题）</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="Plus (ThinkSNS+)" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="edit-an-topic"></a><a href="#edit-an-topic" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit an topic（编辑一个话题）</h2>
+<pre><code class="hljs">PATCH <span class="hljs-regexp">/feed/topics/</span>:topicID
+</code></pre>
+<p>请求内容参数：</p>
+<table>
+<thead>
+<tr><th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left"><code>desc</code></td><td style="text-align:left"><code>string</code></td><td style="text-align:left"><strong>可选</strong>，话题描述最长 <code>500</code> 个字。</td></tr>
+<tr><td style="text-align:left"><code>logo</code></td><td style="text-align:left"><code>integer</code></td><td style="text-align:left"><strong>可选</strong>，话题 Logo 调用《<a href="/docs/api-v2-files.html">文件上传</a>》接口返回的 <code>FileWith</code> ID 标识。</td></tr>
+</tbody>
+</table>
+<p>响应：</p>
+<pre><code class="hljs"><span class="hljs-attr">Status:</span> <span class="hljs-number">204</span> <span class="hljs-literal">No</span> <span class="hljs-string">Content</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="get-a-single-topic"></a><a href="#get-a-single-topic" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get a single topic（获取一个话题详情）</h2>
+<pre><code class="hljs"><span class="hljs-builtin-name">GET</span> /feed/topics/:topicID
+</code></pre>
+<blockquote>
+<p>如果携带 <code>Authorization</code> 则会返回关注状态，否则不会返回！</p>
+</blockquote>
+<p>响应：</p>
+<pre><code class="hljs"><span class="hljs-symbol">Status:</span> <span class="hljs-number">200</span> OK
+</code></pre>
+<pre><code class="hljs css json">{
+    "id": 1,               // 话题 ID
+    "name": "Plus",        // 话题名称
+    "logo": 1,             // 话题 Logo 对应的 FileWith ID
+    "desc": "啊哈哈",       // 话题描述
+    "creator_user_id": 1,  // 话题创建者 User ID
+    "feeds_count": 2,      // 话题下有都少动态
+    "followers_count": 1,  // 有多少人关注了这个话题
+    "has_followed": true   // 当前 Authorization 用户是否关注了话题
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="api-v2-feeds-currency.html">← 积分部分新增接口</a><a class="docs-next button" href="api-v2-music.html">音乐 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#list-all-topics">List all topics（获取全部话题）</a></li><li><a href="#create-an-topic">Create an topic（创建一个话题）</a></li><li><a href="#follow-a-topic">Follow a topic（关注一个话题）</a></li><li><a href="#unfollow-a-topic">Unfollow a topic（取消关注一个话题）</a></li><li><a href="#edit-an-topic">Edit an topic（编辑一个话题）</a></li><li><a href="#get-a-single-topic">Get a single topic（获取一个话题详情）</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="Plus (ThinkSNS+)" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({
                 
                 apiKey: '5e14e81576e97337f567595ea504b651',
