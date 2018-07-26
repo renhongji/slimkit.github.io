@@ -102,7 +102,28 @@
     "has_followed": true   // 当前 Authorization 用户是否关注了话题
 }
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="api-v2-feeds-currency.html">← 积分部分新增接口</a><a class="docs-next button" href="api-v2-music.html">音乐 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#list-all-topics">List all topics（获取全部话题）</a></li><li><a href="#create-an-topic">Create an topic（创建一个话题）</a></li><li><a href="#follow-a-topic">Follow a topic（关注一个话题）</a></li><li><a href="#unfollow-a-topic">Unfollow a topic（取消关注一个话题）</a></li><li><a href="#edit-an-topic">Edit an topic（编辑一个话题）</a></li><li><a href="#get-a-single-topic">Get a single topic（获取一个话题详情）</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="Plus (ThinkSNS+)" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="list-feeds-for-a-topic"></a><a href="#list-feeds-for-a-topic" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List feeds for a topic（获取话题下的动态列表）</h2>
+<pre><code class="hljs">GET /feed/topics/<span class="hljs-symbol">:topicID/feeds</span>
+</code></pre>
+<p>请求查询参数：</p>
+<table>
+<thead>
+<tr><th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left"><code>limit</code></td><td style="text-align:left"><code>integer</code></td><td style="text-align:left">本次请求请求的数据条数，默认 <code>15</code> 条，允许的范围 <code>1 - 100</code>。</td></tr>
+<tr><td style="text-align:left"><code>direction</code></td><td style="text-align:left"><code>string</code></td><td style="text-align:left">用于基于数据 <code>index</code> 字段的排序方向设置，允许 <code>asc</code> 或者 <code>desc</code>，默认 <code>desc</code></td></tr>
+<tr><td style="text-align:left"><code>index</code></td><td style="text-align:left"><code>integer</code></td><td style="text-align:left">数据查询定位值，来源于数据 <code>index</code> 字段。</td></tr>
+</tbody>
+</table>
+<p>响应：</p>
+<pre><code class="hljs"><span class="hljs-symbol">Status:</span> <span class="hljs-number">200</span> OK
+</code></pre>
+<blockquote>
+<p><code>Body</code> 部分和《<a href="/docs/api-v2-feeds-get.html">动态获取</a>》接口保持一直。
+保持数据格式一致的做法是为了避免新内容造成客户端重写 Controller 考虑，相比其他接口，本接口数据内容会多出一个 <code>index</code> 字段。</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="api-v2-feeds-currency.html">← 积分部分新增接口</a><a class="docs-next button" href="api-v2-music.html">音乐 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#list-all-topics">List all topics（获取全部话题）</a></li><li><a href="#create-an-topic">Create an topic（创建一个话题）</a></li><li><a href="#follow-a-topic">Follow a topic（关注一个话题）</a></li><li><a href="#unfollow-a-topic">Unfollow a topic（取消关注一个话题）</a></li><li><a href="#edit-an-topic">Edit an topic（编辑一个话题）</a></li><li><a href="#get-a-single-topic">Get a single topic（获取一个话题详情）</a></li><li><a href="#list-feeds-for-a-topic">List feeds for a topic（获取话题下的动态列表）</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="Plus (ThinkSNS+)" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({
                 
                 apiKey: '5e14e81576e97337f567595ea504b651',
