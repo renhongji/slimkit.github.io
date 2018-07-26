@@ -18,6 +18,7 @@
 <tr><td style="text-align:left"><code>limit</code></td><td style="text-align:left"><code>integer</code></td><td style="text-align:left">本次请求请求的数据条数，默认 <code>15</code> 条，允许的范围 <code>1 - 100</code>。</td></tr>
 <tr><td style="text-align:left"><code>direction</code></td><td style="text-align:left"><code>string</code></td><td style="text-align:left">用于基于数据 <code>id</code> 字段的排序方向设置，允许 <code>asc</code> 或者 <code>desc</code>，默认 <code>desc</code></td></tr>
 <tr><td style="text-align:left"><code>index</code></td><td style="text-align:left"><code>integer</code></td><td style="text-align:left">数据查询定位值，来源于数据 <code>id</code> 字段。</td></tr>
+<tr><td style="text-align:left"><code>only</code></td><td style="text-align:left"><code>string</code></td><td style="text-align:left"><strong>可选</strong>，该字段只有一个固定值 <code>hot</code>，当出现 <code>only</code> 值的时候其他参数全部失效，转而 API 只返回热门话题数据。</td></tr>
 </tbody>
 </table>
 <p>响应：</p>
